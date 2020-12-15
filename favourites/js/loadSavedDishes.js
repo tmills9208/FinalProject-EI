@@ -7,11 +7,11 @@ $(window).on('load', function(){
     .then((data) => {
       var itemHtml = `
       <div class="item">
-      <a href="../dish/index.html?id=${data.idMeal}"></a>
+      <a href="../dish/index.html?id=${data.idMeal}" tabindex="${parseInt(id + 2).toString()}"></a>
       <div class="item-img">
         <img src="${data.strMealThumb}">
       </div>
-      <div>
+      <div class="item-steps">
         <p>${data.strMeal}</p>
       </div>
       </div>
