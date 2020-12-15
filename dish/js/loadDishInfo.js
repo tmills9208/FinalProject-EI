@@ -9,12 +9,14 @@ function populateView(data){
   
   var savedIdIndex = JSON.parse(localStorage.getItem('savedIds')).indexOf(parseInt(data.idMeal));
   if (savedIdIndex >= 0) {
-    $('#btnSave').html('Saved');
+    $('#btnImg').addClass('saved');
     $("#isSaved").val('true');
+    $('#favText').html('Saved!');
   }
   else {
-    $('#btnSave').html('Not saved');
+    $('#btnImg').removeClass('saved');
     $("#isSaved").val('false');
+    $('#favText').html('Save');
   }
 
   // Arrange
@@ -60,7 +62,8 @@ $(document).ready(function(){
       savedIds.push(parseInt($('#idMeal').val()));
       localStorage.setItem('savedIds', JSON.stringify(savedIds));
       $('#isSaved').val('true');
-      $('#btnSave').html('Saved');
+      $('#btnImg').addClass('saved');
+      $('#favText').html('Saved!');
     }
     else {
       // if saved already
@@ -71,7 +74,8 @@ $(document).ready(function(){
         localStorage.setItem('savedIds', JSON.stringify(savedIds));
         if (savedIds.indexOf(parseInt($('#idMeal').val())) < 0) {
           $('#isSaved').val('false');
-          $('#btnSave').html('Not Saved');
+          $('#btnImg').removeClass('saved');
+          $('#favText').html('Save');
         }
       }
     }

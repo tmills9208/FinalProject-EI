@@ -47,8 +47,54 @@ div.grid-container div {
 }
 
 form#favouriteForm{
+  position: relative;
   float: right;
+  width: 10vw;
+  padding: 1vw;
+  background-color: rgb(255, 0, 0, 0.2);
+  box-sizing: border-box;
 }
+
+p#favText{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.5vw;
+  margin: 0;
+  float: left;
+  width: 66%;
+  height: inherit;
+  padding-top: 3%;
+}
+
+button#btnSave{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: none;
+  border: 0;
+  border: 1px solid white;
+}
+
+button#btnImg{
+  float: right;
+  width: 33%;
+  margin: auto 0;
+  height: 2vw;
+  background: none;
+  background-image: url('../img/icons/star-regular.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+}
+
+button#btnImg.saved{
+  background-image: url('../img/icons/star-solid.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 
 .item div.item-steps{
   color: white;
@@ -128,7 +174,7 @@ a.home-link {
 a.home-link:hover, a.home-link:focus {
   background-color: orange;
   border-radius: 5px;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 h1#app-title{
