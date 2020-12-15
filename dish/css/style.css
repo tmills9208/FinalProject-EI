@@ -1,0 +1,28 @@
+body {
+  overflow-y: auto;
+}
+
+h1#dishName {
+  width: 100%;
+  padding-top: 10px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  padding: 0 33%;
+}
+
+img#dishImg{
+  width: 100%;
+  display: block;
+  padding: 5vw;
+  margin: 0 auto;
+  height: auto;
+  max-width: 30%;
+}
+
+p#dishInstructions{
+  color: white;
+  width: 100%;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
